@@ -775,10 +775,7 @@ var id = 0;
 var ready = false;;
 
 function job() {
-  really.src = objects[id].url;
-  progress.style.width = (id++) + "%";
-
-  if (id == 101) {
+  if (id == 100) {
     alert("YOU STILL FEEL RETARD? OH YOU ARE REALLY RETARDED, AREN'T YOU!")
   }
 
@@ -786,15 +783,20 @@ function job() {
     id = 0;
   }
 
+  really.onload = function () {
+    really.style.transition = "0s";
+    really.style.transform = "translateX(1500px)";
 
-  really.style.transition = "0s";
-  really.style.transform = "translateX(1500px)";
-
-  setTimeout(function () {
-    really.style.transition = "0.5s";
-    really.style.transform = "translateX(0)";
-    ready = true;
-  }, 10);
+    setTimeout(function () {
+      really.style.transition = "0.5s";
+      really.style.transform = "translateX(0)";
+      ready = true;
+      document.getElementById("loading").style.display = "none";
+    }, 10);
+  }
+  
+  really.src = objects[id].url;
+  progress.style.width = (id++) + "%";
 }
 
 next.onclick = function () {
