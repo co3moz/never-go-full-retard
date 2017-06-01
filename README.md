@@ -4,7 +4,7 @@ Sometimes we got retarded brain. Can't think, can't create, can't even speak. Th
 
 Just tell what is the image that you see.
 
-[Want to test it? CLICK ME BABY]()
+[Want to test it?](https://cdn.rawgit.com/co3moz/never-go-full-retard/master/index.html)
 
 ## Project
 
